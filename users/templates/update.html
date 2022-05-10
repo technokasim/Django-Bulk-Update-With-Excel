@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Update position
+{% endblock title %}
+
+
+{% block content %}
+
+
+<div class="container mt-5">
+
+  <p><h1 align="center">Position Entry Page</h1></p>
+
+
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+              <div class="col-sm-4"><h2>Update in <b>Excel</b></h2></div>
+                      <a href="/" type="button" class="btn btn-info">
+                          <i class="fa fa-home"></i> Home
+                      </a>
+                      <a href="/create" type="button" class="btn btn-info">
+                        <i class="fa fa-file-excel-o"></i> Create in Excel
+                    </a>
+                      <a href="/logout" type="button" class="btn btn-danger">
+                          <i class="fa fa-lock"></i> Logout
+                      </a>
+          
+                      <a href="/add-data" type="button" class="btn btn-info">
+                        <i class="fa fa-plus"></i> Bulk Upload & View
+                    </a>
+                     
+                  </div>
+                  <div class='btn btn-info' id="displaymessage" style="display:none;width:100%;margin-top:10px;"></div>
+              </div>
+         
+                <br>
+  {% include hot_template %}
+
+</div>
+</div> 
+{% endblock content %}
