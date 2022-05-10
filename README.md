@@ -1,5 +1,7 @@
 This is a simple django project
 
+Youtube Instruction : https://youtu.be/rbhYAEBkJWY
+
 
 Frontend = html, inline css, bootstrap
 
