@@ -7,7 +7,10 @@ from django.contrib.auth import login
 from django.contrib import messages
 from .models import *
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+from funky_sheets.formsets import HotView
 
 # Create your views here.
 def home(request):
@@ -146,14 +149,6 @@ def ajax_delete(request):
             return JsonResponse(response)
 
 
-from django.urls import reverse, reverse_lazy
-from django.contrib.auth.models import User
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponse
-
-
-from funky_sheets.formsets import HotView
-from django.http import HttpResponseRedirect
 
 class CreateExcelView(LoginRequiredMixin, HotView):
     login_url = '/login'
